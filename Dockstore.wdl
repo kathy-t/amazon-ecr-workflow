@@ -76,7 +76,4 @@ task privateDigestImage {
 workflow test {
   call publicTagImage
   call publicDigestImage
-  call publicNoTagImage
-  call privateTagImage
-  call privateDigestImage
 }
