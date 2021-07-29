@@ -28,6 +28,21 @@ task publicDigestImage {
   }
 }
 
+task publicTagImage2 {
+  String name
+  
+  command {
+    echo 'Hello ${name}!'
+  }
+  output {
+    File response = stdout()
+  }
+  
+  runtime {
+    docker: "public.ecr.aws/bitnami/python:3.8.11"
+  }
+}
+
 task publicNoTagImage {
   String name
   
@@ -75,5 +90,5 @@ task privateDigestImage {
 
 workflow test {
   call publicTagImage
-  call publicDigestImage
+  call publicTagImage2
 }
