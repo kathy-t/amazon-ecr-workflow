@@ -24,7 +24,7 @@ task publicDigestImage {
   }
   
   runtime {
-    docker: "public.ecr.aws/ubuntu/ubuntu@sha256:faa7efd33c53046df8e348cf2750c68ad70fb034dff23cc40756eb39e5c064f2"
+    docker: "public.ecr.aws/bitnami/python@sha256:4584e7a7c2a420273254c6d1276fa139a4186162d08a308df282da4e0576d725"
   }
 }
 
