@@ -89,6 +89,5 @@ task privateDigestImage {
 }
 
 workflow test {
-  call publicTagImage
-  call publicTagImage2
+  call privateTagImage
 }
