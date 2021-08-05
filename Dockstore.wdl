@@ -88,6 +88,21 @@ task privateDigestImage {
   }
 }
 
+task publicInvalidTagImage {
+  String name
+  
+  command {
+    echo 'Hello ${name}!'
+  }
+  output {
+    File response = stdout()
+  }
+  
+  runtime {
+    docker: "public.ecr.aws/ubuntu/ubuntu:12345"
+  }
+}
+
 workflow test {
-  call privateTagImage
+  call publicInvalidTagImage
 }
