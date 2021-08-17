@@ -54,7 +54,7 @@ task publicNoTagImage {
   }
   
   runtime {
-    docker: "public.ecr.aws/ubuntu/ubuntu"
+    docker: "public.ecr.aws/ubuntu/ubuntu/test"
   }
 }
 
@@ -88,7 +88,7 @@ task privateDigestImage {
   }
 }
 
-task publicInvalidTagImage {
+task publicTagImage {
   String name
   
   command {
@@ -99,10 +99,10 @@ task publicInvalidTagImage {
   }
   
   runtime {
-    docker: "public.ecr.aws/ubuntu/ubuntu:12345"
+    docker: "public.ecr.aws/ubuntu/ubuntu/test:latest"
   }
 }
 
 workflow test {
-  call publicInvalidTagImage
+  call publicTagImage
 }
