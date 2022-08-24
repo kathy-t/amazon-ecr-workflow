@@ -3,7 +3,7 @@ class: Workflow
 doc: "This is a description"
 
 dct:creator:
-  foaf:name: Test User
+  foaf:name: Test User Test
   foaf:mbox: mailto:test@dockstore.org
 
 inputs:
